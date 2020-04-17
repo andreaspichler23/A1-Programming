@@ -1,0 +1,29 @@
+in mysql client (mariadb):
+
+CREATE DATABASE `Wetter`;
+CREATE USER 'Andreas'@'localhost' IDENTIFIED BY 'fawkes';
+CREATE USER 'testuser'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON andi.* TO 'testuser'@'localhost';
+GRANT ALL PRIVILEGES ON Wetter.* TO 'Andreas'@'localhost';
+
+CREATE TABLE shopcounter.a1_shop_category SELECT * from weatheraustria.a1_shop_category;
+-- copy table from one db to another
+
+show columns:
+SELECT
+    COLUMN_NAME
+    FROM
+    INFORMATION_SCHEMA.COLUMNS
+    WHERE
+    TABLE_NAME = 'testtable';
+
+data type:
+SELECT DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE 
+     TABLE_NAME = 'testtable';
+
+use 'databasename'
+show tables (all tables in database)
+
+select @@datadir; ... where db are stored
